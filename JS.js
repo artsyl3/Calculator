@@ -685,19 +685,19 @@ window.addEventListener("keydown", event => {
 
 
 function add(num1 , num2){
-    return(num1+num2);
+    return(Number((num1+num2).toFixed(4)));
 }
 
 function substract(num1 , num2){
-    return(num1-num2);
+    return(Number((num1-num2).toFixed(4)));
 }
 
 function multiply(num1 , num2){
-    return(num1*num2);
+    return(Number((num1*num2).toFixed(4)));
 }
 
 function divide(num1 , num2){
-    return((num1/num2).toFixed(4));
+    return(Number((num1/num2).toFixed(4)));
 }
 
 function operator(operator , num1 , num2){
