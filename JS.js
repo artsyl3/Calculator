@@ -277,15 +277,19 @@ document.querySelector(".zero").addEventListener("click" , function(){
 
 window.addEventListener("keydown", event => {
     if (event.key == "0") {
-        thisinput = "0";
-        userInput += thisinput;
-        document.querySelector(".display").textContent = userInput;
-        realVal = Number(userInput);
-        if(round==0){
-            input1 = realVal;
+        if(dotOp>0){
+            thisinput = "0";
+            userInput += thisinput;
+            document.querySelector(".display").textContent = userInput;
+            if(round==0){
+            input1 = Number(userInput);
+            }
+            else{
+            input2 = Number(userInput);
+        }
         }
         else{
-            input2 = realVal;
+            document.querySelector(".display").textContent = document.querySelector(".display").textContent; 
         }
     }
   });
