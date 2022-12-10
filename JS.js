@@ -268,10 +268,22 @@ document.querySelector(".zero").addEventListener("click" , function(){
         }
         else{
         input2 = Number(userInput);
+        }
     }
-    }
-    else{
+    disp = document.querySelector(".display").textContent;
+    if(dotOp==0 && disp=="0"){
         document.querySelector(".display").textContent = document.querySelector(".display").textContent; 
+    }
+    else if((dotOp==0 && disp !="0")){
+        thisinput = "0";
+        userInput += thisinput;
+        document.querySelector(".display").textContent = userInput;
+        if(round==0){
+        input1 = Number(userInput);
+        }
+        else{
+        input2 = Number(userInput);
+        }
     }
 });
 
@@ -286,10 +298,22 @@ window.addEventListener("keydown", event => {
             }
             else{
             input2 = Number(userInput);
+            }
         }
-        }
-        else{
+        disp = document.querySelector(".display").textContent;
+        if(dotOp==0 && disp=="0"){
             document.querySelector(".display").textContent = document.querySelector(".display").textContent; 
+        }
+        else if((dotOp==0 && disp !="0")){
+            thisinput = "0";
+            userInput += thisinput;
+            document.querySelector(".display").textContent = userInput;
+            if(round==0){
+            input1 = Number(userInput);
+            }
+            else{
+            input2 = Number(userInput);
+            }
         }
     }
   });
