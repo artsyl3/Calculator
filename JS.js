@@ -259,14 +259,19 @@ window.addEventListener("keydown", event => {
 });
 
 document.querySelector(".zero").addEventListener("click" , function(){
-    thisinput = "0";
-    userInput += thisinput;
-    document.querySelector(".display").textContent = userInput;
-    if(round==0){
+    if(dotOp>0){
+        thisinput = "0";
+        userInput += thisinput;
+        document.querySelector(".display").textContent = userInput;
+        if(round==0){
         input1 = Number(userInput);
+        }
+        else{
+        input2 = Number(userInput);
+    }
     }
     else{
-        input2 = Number(userInput);
+        document.querySelector(".display").textContent = document.querySelector(".display").textContent; 
     }
 });
 
